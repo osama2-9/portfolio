@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import  { useState } from 'react';
 import { Box, SimpleGrid, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text } from "@chakra-ui/react";
 
