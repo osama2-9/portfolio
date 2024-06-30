@@ -100,7 +100,7 @@ const Projects = () => {
                     cursor="pointer"
                 >
                     <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>Threads Clone Project</Text>
-                    <Image rounded="md" src={imageGroups.threadsClone[0]} alt="Threads Clone Project" />
+                    <Image rounded="md" src={imageGroups.threadsClone[1]} alt="Threads Clone Project" />
                 </Box>
 
                 <Box
