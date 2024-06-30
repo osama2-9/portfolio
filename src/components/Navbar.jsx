@@ -6,6 +6,7 @@ const Navbar = () => {
 
     return (
         <Box
+        
             borderBottom="1px solid gray"
             color="white"
             w="full"
@@ -21,6 +22,7 @@ const Navbar = () => {
                 alignItems="center"
                 h="100%"
                 px="4"
+                me={50}
             >
                 <Box>
                     <Image src="/logo.svg" w={["150px", "200px"]} h="70" />
@@ -43,6 +45,12 @@ const Navbar = () => {
                         _hover={{ textDecoration: "none", color: "blue.500" }}
                     >
                         Services
+                    </Link>
+                    <Link
+                        href="#projects"
+                        _hover={{ textDecoration: "none", color: "blue.500" }}
+                    >
+                        Projects
                     </Link>
                     <Link
                         href="#contact"
@@ -102,6 +110,12 @@ const Navbar = () => {
                             mb="2"
                         >
                             Services
+                        </Link>
+                        <Link mb={2}
+                            href="#projects"
+                            _hover={{ textDecoration: "none", color: "blue.500" }}
+                        >
+                            Projects
                         </Link>
                         <Link
                             href="#contact"
