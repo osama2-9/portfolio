@@ -73,7 +73,10 @@ const Navbar = () => {
                     display={{ base: "block", md: "none" }}
                 >
                     <Flex
-                        bg="gray.900"
+                    p={2}
+
+                        bg="gray.500"
+                        
                         flexDirection="column"
                         alignItems="center"
                         pt="4"
@@ -85,6 +88,7 @@ const Navbar = () => {
                         >
                             Home
                         </Link>
+                        
                         <Link
                             href="#about"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
