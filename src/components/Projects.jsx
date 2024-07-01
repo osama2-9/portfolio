@@ -57,7 +57,7 @@ const Projects = () => {
 
     return (
         <Box id='projects' mt={{
-            base: "400px",
+            base: "425px",
            
 
         }} p={2} w={'100%'} position={'absolute'} top={'2300px'}>
