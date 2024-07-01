@@ -4,6 +4,7 @@ const Hero = () => {
     let name = "I'm Osama Alsrraj";
     return (
         <Box
+        id="home"
             position="absolute"
             top={["50px", "100px", "150px"]}
             left={["20px", "50px", "100px"]}

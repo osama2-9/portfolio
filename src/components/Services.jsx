@@ -9,7 +9,7 @@ const Services = () => {
 
     return (
         <>
-            <Flex p={2} flexDirection={'column'} alignItems={'center'} color={'white'} top={'2200px'} position={'absolute'}>
+            <Flex id="services" p={2} flexDirection={'column'} alignItems={'center'} color={'white'} top={'2100px'} position={'absolute'}>
                 <Box textAlign={'center'} mb={8}>
                     <Text fontSize={["40px", "50px", "55px"]} fontWeight="bold" className="text-teal-500">Services</Text>
                 </Box>

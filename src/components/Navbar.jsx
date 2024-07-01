@@ -29,7 +29,7 @@ const Navbar = () => {
                 </Box>
                 <HStack spacing="4" display={{ base: "none", md: "flex" }}>
                     <Link
-                        href="#"
+                        href="#home"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
                     >
                         Home

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Box, SimpleGrid, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text } from "@chakra-ui/react";
 
 const Projects = () => {
@@ -56,10 +56,11 @@ const Projects = () => {
     };
 
     return (
-        <Box mt={{
-            base: "500px",
-            sm: "600px"
-        }} p={2} w={'100%'} position={'absolute'} top={'2600px'}>
+        <Box id='projects' mt={{
+            base: "400px",
+           
+
+        }} p={2} w={'100%'} position={'absolute'} top={'2300px'}>
             <Box mb={8}>
                 <Text mb={5} textAlign={'center'} color={'teal.500'} fontWeight={'bold'} fontSize={["40px", "50px", "55px"]}>Some Projects</Text>
                 <Text fontWeight={'300'} fontSize={'20'} color={'white'} textAlign={'center'}>Here are some of my projects</Text>

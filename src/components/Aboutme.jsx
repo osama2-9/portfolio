@@ -35,6 +35,7 @@ const Aboutme = () => {
 
   return (
     <Flex
+      id="about"
       direction="column"
       alignItems="center"
       justifyContent="center"
@@ -121,7 +122,7 @@ const Aboutme = () => {
           ))}
         </Swiper>
         <Box mt={30}>
-          <Box bg={'transparent'} color={'white'} position={'relative'}  top={'250'} fontSize={['25' ,'40' ,'50']} fontWeight={'bolder'} zIndex={10}>
+          <Box bg={'transparent'} color={'white'} position={'relative'} top={'250'} fontSize={['25', '40', '50']} fontWeight={'bolder'} zIndex={10}>
             <Text mb={4} bg={'transparent'}>Have a Project ?</Text>
             <Button bg={'teal.500'} color={'white'}>Contact me</Button>
 
