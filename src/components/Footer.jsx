@@ -9,8 +9,8 @@ const Footer = () => {
             position="relative"
             top={{
                 lg:"3330px",
-                base:"3750px",
-                sm:"3750px"
+                base:"4000px",
+                sm:"4000px"
             }}
             width="100%"
             bg="gray.900"

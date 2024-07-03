@@ -54,6 +54,7 @@ const Projects = () => {
         setCurrentImageGroup(imageGroups[imageGroupKey]);
         openModal(imageGroups[imageGroupKey]);
     };
+    
 
     return (
         <Box id='projects' mt={{
