@@ -124,7 +124,10 @@ const Aboutme = () => {
         <Box mt={30}>
           <Box bg={'transparent'} color={'white'} position={'relative'} top={'250'} fontSize={['25', '40', '50']} fontWeight={'bolder'} zIndex={10}>
             <Text mb={4} bg={'transparent'}>Have a Project ?</Text>
-            <Button bg={'teal.500'} color={'white'}>Contact me</Button>
+            <a href="#contact">
+
+              <Button bg={'teal.500'} color={'white'}>Contact me</Button>
+            </a>
 
           </Box>
           <Image rounded={'lg'} src="/programming.jpg" h={'400px'} width={'full'} opacity={.3} />

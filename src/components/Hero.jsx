@@ -4,7 +4,7 @@ const Hero = () => {
     let name = "I'm Osama Alsrraj";
     return (
         <Box
-        id="home"
+            id="home"
             position="absolute"
             top={["50px", "100px", "150px"]}
             left={["20px", "50px", "100px"]}
@@ -46,7 +46,7 @@ const Hero = () => {
                     >
                         Web Developer
                     </Text>
-                    <Link href="osamasarrajCV.pdf" download="osamasarrajCV.pdf">
+                    <Link href="Osama H. S. Alsrraj CV.pdf" download="osamasarrajCV.pdf">
                         <Button mt={4} size="lg" colorScheme="teal">
                             Download CV
                         </Button>
