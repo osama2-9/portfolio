@@ -36,8 +36,7 @@ const Hero = () => {
             color="white"
             mt={{
                 base: "100px",
-                sm: "20px",
-                
+                sm: "20px"
             }}
             p={4}
             w="100%"
@@ -56,6 +55,7 @@ const Hero = () => {
                         fontSize={["24px", "32px", "40px", "55px"]}
                         fontWeight="bold"
                         letterSpacing="2px"
+                        animation={`${fadeInUp} 1.5s 0.3s ease-in-out both`} // Adjusted timing for "Hi, {name}"
                     >
                         Hi, {name}
                     </Text>
@@ -67,25 +67,23 @@ const Hero = () => {
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }}
-                        animation={`${textZoomIn} 1s ease-in-out`}
+                        animation={`${textZoomIn} 1.5s 0.5s ease-in-out both`} // Adjusted timing for "Web Developer"
                     >
                         Web Developer
                     </Text>
                     <Link href="Osama H. S. Alsrraj CV.pdf" download="osamasarrajCV.pdf">
-                        <Button mt={4} size="lg" colorScheme="teal">
+                        <Button mt={4} size="lg" colorScheme="teal" animation={`${fadeInUp} 1.5s 0.7s ease-in-out both`}>
                             Download CV
                         </Button>
                     </Link>
                 </Box>
-                <Box mt={[4, 4, 0]} textAlign="center" ml={{
-                    lg:"300px"
-                }}>
+                <Box mt={[4, 4, 0]} textAlign="center">
                     <Image
                         src="me.png"
                         alt="Osama Alsrraj"
                         boxSize={["200px", "250px", "300px", "350px"]}
                         borderRadius="full"
-                        animation={`${fadeInUp} 1.5s ease-in-out`}
+                        animation={`${fadeInUp} 1.5s 0.5s ease-in-out both`} // Adjusted timing for the image
                     />
                 </Box>
             </Flex>
