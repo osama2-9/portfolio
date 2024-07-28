@@ -35,9 +35,9 @@ const Contact = () => {
         <Box
             position={'relative'}
             top={{
-                lg: "3270px",
-                base: "3800px",
-                sm: "3800px"
+                lg: "3000px",
+                base: "3650px",
+                sm: "3650px"
             }}
             maxW="800px"
             mx="auto"

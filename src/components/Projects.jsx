@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { Box, SimpleGrid, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text } from "@chakra-ui/react";
 
 const Projects = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [imagesToShow, setImagesToShow] = useState([]);
     const [currentImageGroup, setCurrentImageGroup] = useState([]);
 
     const imageGroups = {
@@ -13,7 +11,7 @@ const Projects = () => {
             "/e2.png",
             "/e3.png",
             "/e4.png",
-            "/e5.png",
+            "/main.png",
             "/e6.png",
             "/e7.png",
             "/e8.png",
@@ -26,9 +24,10 @@ const Projects = () => {
             "/e15.png",
             "/e16.png",
             "/e17.png",
-            "/e18.png",
+            "/myorder.png",
             "/e19.png",
-            "/e20.png"
+            "/e20.png",
+            "rate.png"
         ],
         threadsClone: [
             "/t1.png",
@@ -42,7 +41,7 @@ const Projects = () => {
     };
 
     const openModal = (images) => {
-        setImagesToShow(images);
+        setCurrentImageGroup(images);
         setIsOpen(true);
     };
 
@@ -51,17 +50,18 @@ const Projects = () => {
     };
 
     const handleClickImageGroup = (imageGroupKey) => {
-        setCurrentImageGroup(imageGroups[imageGroupKey]);
         openModal(imageGroups[imageGroupKey]);
     };
-    
+
+    const handleImageClick = (image) => {
+        window.open(image, '_blank');
+    };
 
     return (
-        <Box id='projects' mt={{
-            base: "425px",
-           
-
-        }} p={2} w={'100%'} position={'absolute'} top={'2300px'}>
+        <Box id='projects' mt={{ base: "700px" }} p={2} w={'100%'} position={'absolute'} top={{
+            lg:"1900px",
+            base:"2300px"
+        }}>
             <Box mb={8}>
                 <Text mb={5} textAlign={'center'} color={'teal.500'} fontWeight={'bold'} fontSize={["40px", "50px", "55px"]}>Some Projects</Text>
                 <Text fontWeight={'300'} fontSize={'20'} color={'white'} textAlign={'center'}>Here are some of my projects</Text>
@@ -81,7 +81,6 @@ const Projects = () => {
                     }}
                     textAlign="center"
                     onClick={() => handleClickImageGroup('ecommerce')}
-                    cursor="pointer"
                 >
                     <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>E-commerce Project</Text>
                     <Image rounded="md" src={imageGroups.ecommerce[0]} alt="E-commerce Project" />
@@ -100,7 +99,6 @@ const Projects = () => {
                     }}
                     textAlign="center"
                     onClick={() => handleClickImageGroup('threadsClone')}
-                    cursor="pointer"
                 >
                     <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>Threads Clone Project</Text>
                     <Image rounded="md" src={imageGroups.threadsClone[1]} alt="Threads Clone Project" />
@@ -119,7 +117,6 @@ const Projects = () => {
                     }}
                     textAlign="center"
                     onClick={() => handleClickImageGroup('learn')}
-                    cursor="pointer"
                 >
                     <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>Learn Project</Text>
                     <Image rounded="md" src={imageGroups.learn[0]} alt="Learn Project" />
@@ -128,13 +125,20 @@ const Projects = () => {
 
             <Modal isOpen={isOpen} onClose={closeModal}>
                 <ModalOverlay />
-                <ModalContent>
+                <ModalContent bg={'gray.800'}>
                     <ModalHeader color={'white'}>Project Images</ModalHeader>
-                    <ModalCloseButton />
+                    <ModalCloseButton color={'white'} />
                     <ModalBody>
                         <SimpleGrid columns={[2, null, 4]} spacing={4}>
                             {currentImageGroup.map((image, index) => (
-                                <Image key={index} src={image} alt={`Image ${index + 1}`} />
+                                <Image
+                                    key={index}
+                                    src={image}
+                                    alt={`Image ${index + 1}`}
+                                    onClick={() => handleImageClick(image)}
+                                    cursor="pointer"
+                                    _hover={{ transform: 'scale(1.05)', transition: '0.3s' }}
+                                />
                             ))}
                         </SimpleGrid>
                     </ModalBody>

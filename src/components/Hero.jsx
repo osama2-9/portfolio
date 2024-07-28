@@ -1,32 +1,56 @@
-import { Box, Flex, Image, Text, Button, Link } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Button, Link, keyframes } from "@chakra-ui/react";
+
+// Define keyframes for the fade-in and slide-up animation
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Define keyframes for the text animation
+const textZoomIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 const Hero = () => {
-    let name = "I'm Osama Alsrraj";
+    const name = "I'm Osama Alsrraj";
+
     return (
         <Box
             id="home"
-            position="absolute"
+            position="relative"
             top={["50px", "100px", "150px"]}
-            left={["20px", "50px", "100px"]}
+            left={0}
             color="white"
             mt={{
                 base: "100px",
-                sm: "20px"
+                sm: "20px",
+                
             }}
-
             p={4}
-            w="90%"
+            w="100%"
+            animation={`${fadeInUp} 1s ease-in-out`}
         >
             <Flex
                 direction={["column", "column", "row"]}
-                justifyContent={["center", "center", "space-between"]}
+                justifyContent="center"
                 alignItems="center"
                 wrap="wrap"
                 textAlign={["center", "center", "left"]}
             >
-                <Box me={{
-                    sm: "10"
-                }} mb={[4, 4, 0]}>
+                <Box mb={[4, 4, 0]} textAlign={["center", "center", "left"]}>
                     <Text
                         mb={2}
                         fontSize={["24px", "32px", "40px", "55px"]}
@@ -43,6 +67,7 @@ const Hero = () => {
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }}
+                        animation={`${textZoomIn} 1s ease-in-out`}
                     >
                         Web Developer
                     </Text>
@@ -51,16 +76,16 @@ const Hero = () => {
                             Download CV
                         </Button>
                     </Link>
-
                 </Box>
-                <Box me={{
-                    sm: "10"
-                }} mt={[4, 4, 0]}>
+                <Box mt={[4, 4, 0]} textAlign="center" ml={{
+                    lg:"300px"
+                }}>
                     <Image
                         src="me.png"
                         alt="Osama Alsrraj"
-                        boxSize={["200px", "250px", "350px"]}
+                        boxSize={["200px", "250px", "300px", "350px"]}
                         borderRadius="full"
+                        animation={`${fadeInUp} 1.5s ease-in-out`}
                     />
                 </Box>
             </Flex>

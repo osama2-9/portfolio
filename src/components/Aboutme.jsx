@@ -21,8 +21,8 @@ import tailwindImage from "/tailwind.svg";
 
 const Aboutme = () => {
   const technologies = [
-    { image: cssImage, name: "CSS" },
     { image: htmlImage, name: "HTML" },
+    { image: cssImage, name: "CSS" },
     { image: jsImage, name: "JavaScript" },
     { image: reactImage, name: "React.js" },
     { image: expressImage, name: "Express.js" },

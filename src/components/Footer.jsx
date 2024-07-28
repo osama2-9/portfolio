@@ -4,13 +4,13 @@ import { FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
     return (
         <Box
-        id="contact"
+            id="contact"
             color="white"
             position="relative"
             top={{
-                lg:"3330px",
-                base:"4000px",
-                sm:"4000px"
+                lg: "3200px",
+                base: "3900px",
+                sm: "3800px"
             }}
             width="100%"
             bg="gray.900"
@@ -22,12 +22,12 @@ const Footer = () => {
                 flexDirection={{ sm: "column", base: 'column', md: 'row' }}
                 align="center"
                 justify="space-between"
-              
+
                 maxW="1200px"
                 mx="auto"
             >
                 <Flex
-                gap={4}
+                    gap={4}
                     bg={'transparent'}
                     flexDirection={{ sm: "column", base: 'column', md: 'row' }}
                     justify={{ base: 'center', md: 'flex-start' }}

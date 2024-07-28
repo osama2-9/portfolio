@@ -6,7 +6,6 @@ const Navbar = () => {
 
     return (
         <Box
-        
             borderBottom="1px solid gray"
             color="white"
             w="full"
@@ -21,52 +20,52 @@ const Navbar = () => {
                 justifyContent="space-between"
                 alignItems="center"
                 h="100%"
-                px="4"
-                me={50}
+                px={{ base: "4", md: "8" }}
             >
                 <Box>
-                    <Image src="/logo.svg" w={["150px", "200px"]} h="70" />
+                    <Image src="/logo.svg" w={["150px", "200px"]} h="70px" />
                 </Box>
-                <HStack spacing="4" display={{ base: "none", md: "flex" }}>
+                <HStack spacing="8" display={{ base: "none", md: "flex" }}>
                     <Link
                         href="#home"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
+                        aria-label="Home"
                     >
                         Home
                     </Link>
                     <Link
                         href="#about"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
+                        aria-label="About"
                     >
                         About
                     </Link>
                     <Link
                         href="#services"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
+                        aria-label="Services"
                     >
                         Services
                     </Link>
                     <Link
                         href="#projects"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
+                        aria-label="Projects"
                     >
                         Projects
                     </Link>
                     <Link
                         href="#contact"
                         _hover={{ textDecoration: "none", color: "blue.500" }}
+                        aria-label="Contact"
                     >
                         Contact
                     </Link>
                 </HStack>
                 <IconButton
-                className="transition-all"
-                    color={'white'}
-                    _hover={{
-                        bg: "black",
-
-                    }}
-                    aria-label="Open menu"
+                    color="white"
+                    _hover={{ bg: "black" }}
+                    aria-label="Toggle menu"
                     display={{ base: "block", md: "none" }}
                     onClick={isOpen ? onClose : onOpen}
                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -81,26 +80,23 @@ const Navbar = () => {
                     display={{ base: "block", md: "none" }}
                 >
                     <Flex
-                    p={2}
-
-                        bg="gray.500"
-                        
                         flexDirection="column"
                         alignItems="center"
                         pt="4"
                     >
                         <Link
-                            href="#"
+                            href="#home"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
                             mb="2"
+                            onClick={onClose}
                         >
                             Home
                         </Link>
-                        
                         <Link
                             href="#about"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
                             mb="2"
+                            onClick={onClose}
                         >
                             About
                         </Link>
@@ -108,18 +104,22 @@ const Navbar = () => {
                             href="#services"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
                             mb="2"
+                            onClick={onClose}
                         >
                             Services
                         </Link>
-                        <Link mb={2}
+                        <Link
                             href="#projects"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
+                            mb="2"
+                            onClick={onClose}
                         >
                             Projects
                         </Link>
                         <Link
                             href="#contact"
                             _hover={{ textDecoration: "none", color: "blue.500" }}
+                            onClick={onClose}
                         >
                             Contact
                         </Link>
