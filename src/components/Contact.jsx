@@ -73,8 +73,8 @@ const Contact = () => {
             position={'relative'}
             top={{
                 lg: "3000px",
-                
-                sm: "3800px"
+                base: "3700px",
+                sm: "3700px"
             }}
             maxW="800px"
             mx="auto"
