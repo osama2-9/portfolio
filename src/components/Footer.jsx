@@ -53,7 +53,7 @@ const Footer = () => {
                         <Text bg={'transparent'}>+20 01040661625</Text>
                     </Flex>
                 </Flex>
-                <Text bg={'transparent'} fontSize="sm" color="gray.500" textAlign={{ base: 'center', md: 'right' }}>
+                <Text bg={'transparent'} fontSize="sm" color="white" textAlign={{ base: 'center', md: 'right' }}>
                     &copy; {new Date().getFullYear()} Osama Alsrraj. All rights reserved.
                 </Text>
             </Flex>
