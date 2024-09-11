@@ -9,9 +9,9 @@ const Services = () => {
 
     return (
         <>
-            <Flex id="services" p={2} flexDirection={'column'} alignItems={'center'} color={'white'} top={'2100px'} position={'absolute'}>
+            <Flex id="services" p={2} flexDirection={'column'} alignItems={'center'} color={'white'} top={'2200px'} position={'absolute'}>
                 <Box textAlign={'center'} mb={8}>
-                    <Text fontSize={["40px", "50px", "55px"]} fontWeight="bold" className="text-teal-500">Services</Text>
+                    <Text fontSize={["40px", "50px", "55px"]} fontWeight="bold" className="text-blue-500">Services</Text>
                 </Box>
                 <SimpleGrid mt={20} columns={[1, null, 3]} spacing={10}>
                     
@@ -27,8 +27,8 @@ const Services = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        <Text className="text-teal-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Frontend Development</Text>
-                        <Text bg={'transparent'} mt={4}>
+                        <Text className="text-blue-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Frontend Development</Text>
+                        <Text color={'black'} bg={'transparent'} mt={4}>
                             Building responsive and visually appealing user interfaces using modern frontend technologies like React, React + Vite.
                         </Text>
                     </Box>
@@ -44,8 +44,8 @@ const Services = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        <Text className="text-teal-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Backend Development</Text>
-                        <Text bg={'transparent'} mt={4}>
+                        <Text className="text-blue-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Backend Development</Text>
+                        <Text color={'black'} bg={'transparent'} mt={4}>
                             Crafting robust and scalable server-side applications with Node.js, Express, and other backend technologies to ensure smooth data flow and integration.
                         </Text>
                     </Box>
@@ -61,8 +61,8 @@ const Services = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        <Text className="text-teal-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Fullstack Development</Text>
-                        <Text bg={'transparent'} mt={4}>
+                        <Text className="text-blue-500" bg={'transparent'} fontSize="2xl" fontWeight="bold">Fullstack Development</Text>
+                        <Text bg={'transparent'} color={'black'} mt={4}>
                             Offering end-to-end solutions by combining frontend and backend expertise to deliver complete and efficient web applications.
                         </Text>
                     </Box>

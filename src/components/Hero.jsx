@@ -31,14 +31,9 @@ const Hero = () => {
         <Box
             id="home"
             position="relative"
-            top={["50px", "100px", "150px"]}
-            left={0}
-            color="white"
-            mt={{
-                base: "100px",
-                sm: "20px"
-            }}
-            p={4}
+            color="black"
+            mt={{ base: "80px", sm: "150px" }}
+            px={4}
             w="100%"
             animation={`${fadeInUp} 1s ease-in-out`}
         >
@@ -52,27 +47,31 @@ const Hero = () => {
                 <Box mb={[4, 4, 0]} textAlign={["center", "center", "left"]}>
                     <Text
                         mb={2}
-                        fontSize={["24px", "32px", "40px", "55px"]}
+                        fontSize={["34px", "40px", "44px", "55px"]}
                         fontWeight="bold"
-                        letterSpacing="2px"
-                        animation={`${fadeInUp} 1.5s 0.3s ease-in-out both`} // Adjusted timing for "Hi, {name}"
+                        letterSpacing="wide"
+                        animation={`${fadeInUp} 1.5s 0.3s ease-in-out both`}
                     >
                         Hi, {name}
                     </Text>
                     <Text
-                        fontSize={["20px", "28px", "36px", "50px"]}
+                        fontSize={["20px", "28px", "36px", "48px"]}
                         fontWeight="bold"
-                        style={{
-                            background: "linear-gradient(90deg, #14b8a6, #3b82f6)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent",
-                        }}
-                        animation={`${textZoomIn} 1.5s 0.5s ease-in-out both`} // Adjusted timing for "Web Developer"
+                        color="blue.500"
+                        lineHeight="1.2"
+                        animation={`${textZoomIn} 1.5s 0.5s ease-in-out both`}
                     >
                         Web Developer
                     </Text>
-                    <Link href="Osama H. S. Alsrraj CV.pdf" download="osamasarrajCV.pdf">
-                        <Button mt={4} size="lg" colorScheme="teal" animation={`${fadeInUp} 1.5s 0.7s ease-in-out both`}>
+                    <Link href="Osama Alsrraj Cv.pdf" download="osamasarrajCV.pdf">
+                        <Button
+                            mt={4}
+                            size="lg"
+                            colorScheme="blue"
+                            animation={`${fadeInUp} 1.5s 0.7s ease-in-out both`}
+                            _hover={{ bg: "blue.600", transform: "scale(1.05)" }}
+                            transition="all 0.3s ease"
+                        >
                             Download CV
                         </Button>
                     </Link>
@@ -83,7 +82,10 @@ const Hero = () => {
                         alt="Osama Alsrraj"
                         boxSize={["200px", "250px", "300px", "350px"]}
                         borderRadius="full"
-                        animation={`${fadeInUp} 1.5s 0.5s ease-in-out both`} // Adjusted timing for the image
+                        ml={{ lg: "70px" }}
+                        shadow="lg"
+                        animation={`${fadeInUp} 1.5s 0.5s ease-in-out both`}
+                        transition="all 0.3s ease"
                     />
                 </Box>
             </Flex>

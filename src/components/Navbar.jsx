@@ -6,10 +6,9 @@ const Navbar = () => {
 
     return (
         <Box
-            borderBottom="1px solid gray"
-            color="white"
+            color="black"
             w="full"
-            bg="#000"
+            bg="white"
             shadow="sm"
             h="70px"
             position="fixed"
@@ -23,7 +22,7 @@ const Navbar = () => {
                 px={{ base: "4", md: "8" }}
             >
                 <Box>
-                    <Image src="/logo.svg" w={["150px", "200px"]} h="70px" />
+                    <Image src="/logo.svg" w={["170px", "200px"]} h="70px" />
                 </Box>
                 <HStack spacing="8" display={{ base: "none", md: "flex" }}>
                     <Link
@@ -63,8 +62,7 @@ const Navbar = () => {
                     </Link>
                 </HStack>
                 <IconButton
-                    color="white"
-                    _hover={{ bg: "black" }}
+                    color="black"
                     aria-label="Toggle menu"
                     display={{ base: "block", md: "none" }}
                     onClick={isOpen ? onClose : onOpen}
@@ -75,7 +73,7 @@ const Navbar = () => {
 
             {isOpen && (
                 <Box
-                    bg="gray.900"
+                    bg="gray.100"
                     pb="4"
                     display={{ base: "block", md: "none" }}
                 >

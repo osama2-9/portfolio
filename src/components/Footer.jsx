@@ -9,11 +9,10 @@ const Footer = () => {
             position="relative"
             top={{
                 lg: "3200px",
-                base: "3900px",
-                sm: "3800px"
+                sm: "3900px"
             }}
             width="100%"
-            bg="gray.900"
+            bg="blue.500"
             py={6}
             px={4}
         >
@@ -50,7 +49,7 @@ const Footer = () => {
 
                     <Flex bg={'transparent'} align="center" mx={2}>
                         <Icon bg={'transparent'} as={FaPhone} w={6} h={6} mr={1} />
-                        <Text bg={'transparent'}>+20 01005791328</Text>
+                        <Text bg={'transparent'}>+20 01040661625</Text>
                     </Flex>
                 </Flex>
                 <Text bg={'transparent'} fontSize="sm" color="gray.500" textAlign={{ base: 'center', md: 'right' }}>

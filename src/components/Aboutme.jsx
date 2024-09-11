@@ -50,17 +50,17 @@ const Aboutme = () => {
         <Text
           fontSize={["40px", "50px", "55px"]}
           fontWeight="bold"
-          className="text-teal-500"
+          className="text-blue-500"
         >
           About me
         </Text>
       </Box>
-      <Text color="white" fontSize={["lg", "xl", "2xl"]} lineHeight={1.8} maxW="900px" mb={8}>
+      <Text color="black" fontSize={["lg", "xl", "2xl"]} lineHeight={1.8} maxW="900px" mb={8}>
         I was born in Gaza and educated in its schools. Later, I joined the Islamic University in
         the Faculty of Information Technology, majoring in software development. I am a skilled
         MERN Stack developer with experience in front-end and back-end development, building
         scalable web applications. I primarily use React.js for front-end development, and Express.js
-        and Node.js for back-end development, with MongoDB for data storage. I am proficient in both
+        and Node.js for back-end development, with MongoDB for data storage also Mysql and Laravel . I am proficient in both
         front-end and back-end technologies.
       </Text>
 
@@ -68,7 +68,7 @@ const Aboutme = () => {
         <Text
           fontSize={["xl", "2xl", "2xl"]}
           fontWeight="bold"
-          className="text-teal-500"
+          className="text-blue-400"
           mb={4}
         >
           Technologies I Use
@@ -114,7 +114,7 @@ const Aboutme = () => {
                   h={["60px", "80px", "100px"]}
                   mx="auto"
                 />
-                <Text color="white" fontWeight={300} mt={2} className="legend" fontSize="lg">
+                <Text color="black" fontWeight={400} mt={2} className="legend" fontSize="lg">
                   {tech.name}
                 </Text>
               </Box>
@@ -122,15 +122,15 @@ const Aboutme = () => {
           ))}
         </Swiper>
         <Box mt={30}>
-          <Box bg={'transparent'} color={'white'} position={'relative'} top={'250'} fontSize={['25', '40', '50']} fontWeight={'bolder'} zIndex={10}>
+          <Box bg={'transparent'} color={'blue.600'} position={'relative'} top={'250'} fontSize={['25', '40', '50']} fontWeight={'bolder'} zIndex={10}>
             <Text mb={4} bg={'transparent'}>Have a Project ?</Text>
             <a href="#contact">
 
-              <Button bg={'teal.500'} color={'white'}>Contact me</Button>
+              <Button bg={'blue.500'} color={'white'}>Contact me</Button>
             </a>
 
           </Box>
-          <Image rounded={'lg'} src="/programming.jpg" h={'400px'} width={'full'} opacity={.3} />
+          <Image rounded={'lg'} src="/programming.jpg" h={'500px'} width={'full'} opacity={.3} />
 
         </Box>
       </Box>

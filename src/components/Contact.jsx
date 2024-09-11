@@ -41,7 +41,7 @@ const Contact = () => {
         }
 
         setIsSubmitting(true);
-        emailjs.sendForm('service_ibeqc0l', 'template_3i2imb7', form.current, 'L66TonavHEzFyxE4F')
+        emailjs.sendForm('service_ysgst67', 'template_3i2imb7', form.current, 'L66TonavHEzFyxE4F')
             .then(
                 () => {
                     toast({
@@ -66,32 +66,33 @@ const Contact = () => {
             );
     };
 
+    let word = "We'll"
+
     return (
         <Box
             position={'relative'}
             top={{
                 lg: "3000px",
-                base: "3650px",
-                sm: "3650px"
+                
+                sm: "3800px"
             }}
             maxW="800px"
             mx="auto"
             p={6}
         >
             <form id='contact' ref={form} onSubmit={sendEmail}>
-                <Box color={'teal.500'} textAlign={'center'}>
-                    <Text fontWeight={'bold'} fontSize={['40px', '50px', '55px']}>Get in Touch</Text>
+                <Box color={'blue.500'} textAlign={'center'}>
+                    <Text fontWeight={'bold'} mb={3} fontSize={['40px', '50px', '55px']}>Get in Touch</Text>
                 </Box>
                 <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={4}>
                     <FormControl id="name" isInvalid={errors.user_name} isRequired>
-                        <FormLabel color="white">Name</FormLabel>
+                        <FormLabel color="black">Name</FormLabel>
                         <Input
                             name='user_name'
                             placeholder="Your name"
-                            color="white"
-                            borderColor="white"
-                            _placeholder={{ color: 'gray.300' }}
-                            _focus={{ borderColor: 'teal.500', boxShadow: '0 0 0 1px #319795' }}
+                            color="black"
+                            borderColor="black"
+                            _placeholder={{ color: 'gray.500' }}
                             onChange={onInputsChange}
                             value={inputs.user_name}
                         />
@@ -102,34 +103,34 @@ const Contact = () => {
                         )}
                     </FormControl>
                     <FormControl id="email" isInvalid={errors.email} isRequired>
-                        <FormLabel color="white">Email</FormLabel>
+                        <FormLabel color="black">Email</FormLabel>
                         <Input
                             name='email'
                             type="email"
                             placeholder="Your email"
-                            color="white"
-                            borderColor="white"
-                            _placeholder={{ color: 'gray.300' }}
-                            _focus={{ borderColor: 'teal.500', boxShadow: '0 0 0 1px #319795' }}
+                            color="black"
+                            borderColor="black"
+                            _placeholder={{ color: 'gray.500' }}
                             onChange={onInputsChange}
                             value={inputs.email}
                         />
                         {errors.email ? (
                             <FormErrorMessage>{errors.email}</FormErrorMessage>
                         ) : (
-                            <FormHelperText>We'll never share your email.</FormHelperText>
+                            <FormHelperText>{word} never share your email.</FormHelperText>
                         )}
                     </FormControl>
                 </SimpleGrid>
                 <FormControl id="message" isInvalid={errors.message} isRequired mt={4}>
-                    <FormLabel color="white">Message</FormLabel>
+                    <FormLabel color="black">Message</FormLabel>
                     <Textarea
+
                         name='message'
                         placeholder="Your message"
-                        color="white"
-                        borderColor="white"
-                        _placeholder={{ color: 'gray.300' }}
-                        _focus={{ borderColor: 'teal.500', boxShadow: '0 0 0 1px #319795' }}
+                        mb={3}
+                        color="black"
+                        borderColor="black"
+                        _placeholder={{ color: 'gray.500' }}
                         onChange={onInputsChange}
                         value={inputs.message}
                     />
@@ -137,7 +138,7 @@ const Contact = () => {
                 </FormControl>
                 <Button
                     type="submit"
-                    colorScheme="teal"
+                    colorScheme="blue"
                     width="full"
                     mt={4}
                     isLoading={isSubmitting}

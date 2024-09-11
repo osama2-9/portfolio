@@ -58,13 +58,13 @@ const Projects = () => {
     };
 
     return (
-        <Box id='projects' mt={{ base: "700px" }} p={2} w={'100%'} position={'absolute'} top={{
+        <Box id='projects' mt={{ base: "800px" }} p={2} w={'100%'} position={'absolute'} top={{
             lg:"1900px",
             base:"2300px"
         }}>
             <Box mb={8}>
-                <Text mb={5} textAlign={'center'} color={'teal.500'} fontWeight={'bold'} fontSize={["40px", "50px", "55px"]}>Some Projects</Text>
-                <Text fontWeight={'300'} fontSize={'20'} color={'white'} textAlign={'center'}>Here are some of my projects</Text>
+                <Text mb={5} textAlign={'center'} color={'blue.500'} fontWeight={'bold'} fontSize={["40px", "50px", "55px"]}>Some Projects</Text>
+                <Text fontWeight={'300'} fontSize={'20'} color={'gray.600'} textAlign={'center'}>Here are some of my projects</Text>
             </Box>
             <SimpleGrid mt={20} columns={[1, null, 3]} spacing={6}>
 
@@ -82,7 +82,7 @@ const Projects = () => {
                     textAlign="center"
                     onClick={() => handleClickImageGroup('ecommerce')}
                 >
-                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>E-commerce Project</Text>
+                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold"  color="gray.600" mb={4}>E-commerce Project</Text>
                     <Image rounded="md" src={imageGroups.ecommerce[0]} alt="E-commerce Project" />
                 </Box>
 
@@ -100,7 +100,7 @@ const Projects = () => {
                     textAlign="center"
                     onClick={() => handleClickImageGroup('threadsClone')}
                 >
-                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>Threads Clone Project</Text>
+                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold"  color="gray.600" mb={4}>Threads Clone Project</Text>
                     <Image rounded="md" src={imageGroups.threadsClone[1]} alt="Threads Clone Project" />
                 </Box>
 
@@ -118,7 +118,7 @@ const Projects = () => {
                     textAlign="center"
                     onClick={() => handleClickImageGroup('learn')}
                 >
-                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold" color="white" mb={2}>Learn Project</Text>
+                    <Text bg={'transparent'} fontSize={['md', 'lg', 'xl']} fontWeight="bold"  color="gray.600" mb={4}>Online Courses Project</Text>
                     <Image rounded="md" src={imageGroups.learn[0]} alt="Learn Project" />
                 </Box>
             </SimpleGrid>
