@@ -94,7 +94,7 @@ const Projects = () => {
     window.open(image, "_blank");
   };
 
-  // Handle image load
+ 
   const handleImageLoad = () => {
     setLoading(false); 
   };
@@ -102,7 +102,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="mt-20 sm:mt-40 p-4 w-full relative top-[2800px] lg:top-[2400px]"
+      className="mt-20 sm:mt-40 p-4 w-full relative top-[3000px] lg:top-[2500px]"
     >
       <div className="mb-8 text-center">
         <h2 className="mb-5 text-blue-500 font-bold text-4xl sm:text-5xl md:text-6xl">

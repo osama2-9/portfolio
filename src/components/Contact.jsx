@@ -74,7 +74,7 @@ const Contact = () => {
             top={{
                 lg: "3000px",
                 base: "3700px",
-                sm: "3700px"
+                sm: "3500px"
             }}
             maxW="800px"
             mx="auto"
