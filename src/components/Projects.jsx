@@ -3,7 +3,7 @@ import { useState } from "react";
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageGroup, setCurrentImageGroup] = useState([]);
-  const [loading, setLoading] = useState(true); // New state for loading
+  const [loading, setLoading] = useState(true); 
 
   const imageGroups = {
     ecommerce: [
@@ -96,7 +96,7 @@ const Projects = () => {
 
   // Handle image load
   const handleImageLoad = () => {
-    setLoading(false); // Once the image is loaded, set loading to false
+    setLoading(false); 
   };
 
   return (
