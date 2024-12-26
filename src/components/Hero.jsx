@@ -69,7 +69,7 @@ const Hero = () => {
           >
             Web Developer
           </Text>
-          <Link href="Osama Alsrraj Cv.pdf" download="osamasarrajCV.pdf">
+          <Link href="OsamaAlsrrajResume.pdf" download="osamasarrajCV.pdf">
             <Button
               mt={4}
               size="lg"
