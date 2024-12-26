@@ -3,7 +3,7 @@ import { useState } from "react";
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageGroup, setCurrentImageGroup] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   const imageGroups = {
     ecommerce: [
@@ -94,9 +94,8 @@ const Projects = () => {
     window.open(image, "_blank");
   };
 
- 
   const handleImageLoad = () => {
-    setLoading(false); 
+    setLoading(false);
   };
 
   return (
@@ -131,7 +130,7 @@ const Projects = () => {
               className="rounded-md"
               src={imageGroups.ecommerce[0]}
               alt="E-commerce Project"
-              onLoad={handleImageLoad} 
+              onLoad={handleImageLoad}
             />
           </div>
         </div>
@@ -153,13 +152,12 @@ const Projects = () => {
               className="rounded-md"
               src={imageGroups.foodApp[0]}
               alt="Food App Project"
-              onLoad={handleImageLoad} 
+              onLoad={handleImageLoad}
             />
           </div>
         </div>
       </div>
 
-     
       <div
         className="p-4 rounded-md bg-white shadow-lg backdrop-blur-sm bg-opacity-10 border border-opacity-20 cursor-pointer text-center"
         onClick={() => handleClickImageGroup("learn")}

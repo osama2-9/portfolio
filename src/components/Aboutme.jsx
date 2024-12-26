@@ -1,5 +1,3 @@
-
-
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -18,15 +16,17 @@ import mongoImage from "/mongo.png";
 import mysqlImage from "/mysql.png";
 import bootstrapImage from "/boot.png";
 import tailwindImage from "/tailwind.svg";
-import jwt from '/jwt.png'
+import jwt from "/jwt.png";
 import chakra from "/chakra.png";
-import git from '/git.svg'
+import git from "/git.svg";
+import typescript from "/typescript.png";
 
 const Aboutme = () => {
   const technologies = [
     { image: htmlImage, name: "HTML" },
     { image: cssImage, name: "CSS" },
     { image: jsImage, name: "JavaScript" },
+    { image: typescript, name: "Typescript" },
     { image: reactImage, name: "React.js" },
     { image: expressImage, name: "Express.js" },
     { image: nodeImage, name: "Node.js" },
