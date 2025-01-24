@@ -1,7 +1,27 @@
 import { useState } from "react";
+import {
+  Box,
+  Grid,
+  Heading,
+  Text,
+  Image,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  SimpleGrid,
+  Button,
+  VStack,
+  useDisclosure,
+  Container,
+  Flex,
+  Tag,
+} from "@chakra-ui/react";
 
 const Projects = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentImageGroup, setCurrentImageGroup] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,67 +47,51 @@ const Projects = () => {
       "/myorder.png",
       "/e19.png",
       "/e20.png",
-      "rate.png",
+      "e21.png",
     ],
-    threadsClone: ["/t1.png", "/t2.png", "/t3.png", "/t4.png"],
-    learn: ["/learn.png"],
-    foodApp: [
-      "/food_1.png",
-      "/food_2.png",
-      "/food_3.png",
-      "/food_4.png",
-      "/food_5.png",
-      "/food_6.png",
-      "/food_7.png",
-      "/food_8.png",
-      "/food_9.png",
-      "/food_10.png",
-      "/food_11.png",
-      "/food_12.png",
-      "/food_13.png",
-      "/food_14.png",
-      "/food_15.png",
-      "/food_16.png",
-      "/food_17.png",
-      "/food_18.png",
-      "/food_19.png",
-      "/food_20.png",
-      "/food_21.png",
-      "/food_22.png",
-      "/food_23.png",
-      "/food_24.png",
-      "/food_25.png",
-      "/food_27.png",
-      "/food_28.png",
-      "/food_29.png",
-      "/food_30.png",
-      "/food_31.png",
-      "/food_32.png",
-      "/food_33.png",
-      "/food_34.png",
-      "/food_35.png",
-      "/food_36.png",
-      "/food_37.png",
-      "/food_38.png",
-      "/food_39.png",
-      "/food_40.png",
-      "/food_41.png",
-      "/food_42.png",
-      "/food_43.png",
-    ],
+    threadsClone: Array.from({ length: 4 }, (_, i) => `/t${i + 1}.png`),
+
+    foodApp: Array.from({ length: 43 }, (_, i) => `/food_${i + 1}.png`),
+    onlineCoursesPlatform: Array.from(
+      { length: 43 },
+      (_, i) => `/ocp${i + 1}.png`
+    ),
   };
 
-  const openModal = (images) => {
-    setCurrentImageGroup(images);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
+  const projectData = {
+    ecommerce: {
+      title: "E-commerce Platform",
+      description:
+        "A full-featured e-commerce platform with user authentication, product management, and secure payments",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
+      images: imageGroups.ecommerce,
+    },
+    foodApp: {
+      title: "Food Delivery App",
+      description:
+        "Real-time food delivery platform with order tracking and restaurant management",
+      tech: ["React + vite +ts", "Node.js", "Express", "MongoDB"],
+      images: imageGroups.foodApp,
+    },
+    onlineCoursesPlatform: {
+      title: "Online Courses Platform",
+      description:
+        "Interactive learning platform with course management and student progress tracking",
+      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma"],
+      images: imageGroups.onlineCoursesPlatform,
+    },
+    threadsClone: {
+      title: "Threads Clone",
+      description:
+        "Social media platform clone with real-time messaging and user interactions",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
+      images: imageGroups.threadsClone,
+    },
   };
 
   const handleClickImageGroup = (imageGroupKey) => {
-    openModal(imageGroups[imageGroupKey]);
+    setCurrentImageGroup(projectData[imageGroupKey].images);
+    onOpen();
   };
 
   const handleImageClick = (image) => {
@@ -98,131 +102,154 @@ const Projects = () => {
     setLoading(false);
   };
 
-  return (
-    <div
-      id="projects"
-      className="mt-20 sm:mt-40 p-4 w-full relative top-[3000px] lg:top-[2500px]"
+  const ProjectCard = ({ project, onClick }) => (
+    <Box
+      borderRadius="xl"
+      overflow="hidden"
+      bg="white"
+      boxShadow="lg"
+      transition="all 0.3s"
+      _hover={{
+        transform: "translateY(-4px)",
+        boxShadow: "xl",
+      }}
+      cursor="pointer"
+      onClick={onClick}
     >
-      <div className="mb-8 text-center">
-        <h2 className="mb-5 text-blue-500 font-bold text-4xl sm:text-5xl md:text-6xl">
-          Some Projects
-        </h2>
-        <p className="text-gray-600 font-light text-lg">
-          Here are some of my projects
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-16">
-        <div
-          className="p-4 rounded-md bg-white shadow-lg backdrop-blur-sm bg-opacity-10 border border-opacity-20 cursor-pointer text-center"
-          onClick={() => handleClickImageGroup("ecommerce")}
-        >
-          <h3 className="text-gray-600 font-bold text-xl mb-4">
-            E-commerce Project
-          </h3>
-          <div className="relative">
-            {loading && (
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="w-8 h-8 border-4 border-t-4 border-blue-500 rounded-full animate-spin"></div>
-              </div>
-            )}
-            <img
-              className="rounded-md"
-              src={imageGroups.ecommerce[0]}
-              alt="E-commerce Project"
-              onLoad={handleImageLoad}
+      <Box position="relative" height="250px">
+        {loading && (
+          <Box
+            position="absolute"
+            inset={0}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Box
+              width="40px"
+              height="40px"
+              border="4px"
+              borderColor="blue.500"
+              borderTopColor="transparent"
+              borderRadius="full"
+              animation="spin 1s linear infinite"
             />
-          </div>
-        </div>
+          </Box>
+        )}
+        <Image
+          src={project.images[0]}
+          alt={project.title}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          onLoad={handleImageLoad}
+        />
+      </Box>
+      <VStack p={4} align="start" spacing={2}>
+        <Heading size="md" color="gray.700">
+          {project.title}
+        </Heading>
+        <Text color="gray.600" noOfLines={2}>
+          {project.description}
+        </Text>
+        <Flex gap={2} wrap="wrap">
+          {project.tech.map((tech, index) => (
+            <Tag key={index} colorScheme="blue" size="sm">
+              {tech}
+            </Tag>
+          ))}
+        </Flex>
+        <Text color="blue.500" fontSize="sm">
+          Click to view gallery
+        </Text>
+      </VStack>
+    </Box>
+  );
 
-        <div
-          className="p-4 rounded-md bg-white shadow-lg backdrop-blur-sm bg-opacity-10 border border-opacity-20 cursor-pointer text-center"
-          onClick={() => handleClickImageGroup("foodApp")}
+  return (
+    <Container maxW="container.xl" id="projects">
+      <Box py={20}>
+        <VStack spacing={8} mb={12}>
+          <Heading
+            size="2xl"
+            color="blue.500"
+            textAlign="center"
+            fontWeight="bold"
+          >
+            Featured Projects
+          </Heading>
+          <Text color="gray.600" textAlign="center" fontSize="lg" maxW="2xl">
+            Explore my portfolio of full-stack applications showcasing modern
+            web development practices and user-centric design
+          </Text>
+        </VStack>
+
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(2, 1fr)",
+          }}
+          gap={8}
         >
-          <h3 className="text-gray-600 font-bold text-xl mb-4">
-            Food App Project
-          </h3>
-          <div className="relative">
-            {loading && (
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="w-8 h-8 border-4 border-t-4 border-blue-500 rounded-full animate-spin"></div>
-              </div>
-            )}
-            <img
-              className="rounded-md"
-              src={imageGroups.foodApp[0]}
-              alt="Food App Project"
-              onLoad={handleImageLoad}
+          {Object.entries(projectData).map(([key, project]) => (
+            <ProjectCard
+              key={key}
+              project={project}
+              onClick={() => handleClickImageGroup(key)}
             />
-          </div>
-        </div>
-      </div>
+          ))}
+        </Grid>
 
-      <div
-        className="p-4 rounded-md bg-white shadow-lg backdrop-blur-sm bg-opacity-10 border border-opacity-20 cursor-pointer text-center"
-        onClick={() => handleClickImageGroup("learn")}
-      >
-        <h3 className="text-gray-600 font-bold text-xl mb-4">
-          Online Courses Project
-        </h3>
-        <img
-          className="rounded-md"
-          src={imageGroups.learn[0]}
-          alt="Learn Project"
-        />
-      </div>
-
-      <div
-        className="p-4 rounded-md bg-white shadow-lg backdrop-blur-sm bg-opacity-10 border border-opacity-20 cursor-pointer text-center"
-        onClick={() => handleClickImageGroup("threadsClone")}
-      >
-        <h3 className="text-gray-600 font-bold text-xl mb-4">
-          Threads Clone Project
-        </h3>
-        <img
-          className="rounded-md"
-          src={imageGroups.threadsClone[1]}
-          alt="Threads Clone Project"
-        />
-      </div>
-
-      {isOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex justify-center items-center">
-          <div className="bg-gray-200 rounded-lg p-4 max-w-4xl w-full">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-black text-xl font-semibold">
-                Project Images
-              </h2>
-              <button onClick={closeModal} className="text-black text-xl">
-                X
-              </button>
-            </div>
-            <div
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-[70vh] overflow-y-auto"
-              style={{ maxHeight: "70vh", overflowY: "auto" }}
-            >
-              {currentImageGroup.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  onClick={() => handleImageClick(image)}
-                  className="cursor-pointer rounded-md hover:scale-105 transition-transform duration-300"
-                />
-              ))}
-            </div>
-            <div className="mt-4 text-center">
-              <button
-                onClick={closeModal}
-                className="bg-blue-500 text-white py-2 px-4 rounded-md"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+        <Modal isOpen={isOpen} onClose={onClose} size="6xl">
+          <ModalOverlay backdropFilter="blur(4px)" />
+          <ModalContent bg="white">
+            <ModalHeader color="gray.700">
+              <VStack align="start" spacing={2}>
+                <Text>{projectData[currentImageGroup]?.title}</Text>
+                <Flex gap={2} wrap="wrap">
+                  {projectData[currentImageGroup]?.tech.map((tech, index) => (
+                    <Tag key={index} colorScheme="blue" size="sm">
+                      {tech}
+                    </Tag>
+                  ))}
+                </Flex>
+                <Text fontSize="md" color="gray.600">
+                  {projectData[currentImageGroup]?.description}
+                </Text>
+              </VStack>
+            </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={6}>
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
+                {currentImageGroup.map((image, index) => (
+                  <Box
+                    key={index}
+                    cursor="pointer"
+                    onClick={() => handleImageClick(image)}
+                    transition="transform 0.2s"
+                    _hover={{ transform: "scale(1.02)" }}
+                    position="relative"
+                    overflow="hidden"
+                    borderRadius="md"
+                    boxShadow="md"
+                  >
+                    <Image
+                      src={image}
+                      alt={`Gallery image ${index + 1}`}
+                      width="100%"
+                      height="auto"
+                      transition="transform 0.3s"
+                      _hover={{ transform: "scale(1.05)" }}
+                    />
+                  </Box>
+                ))}
+              </SimpleGrid>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </Box>
+    </Container>
   );
 };
 

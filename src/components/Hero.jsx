@@ -6,7 +6,12 @@ import {
   Button,
   Link,
   keyframes,
+  Container,
+  VStack,
+  HStack,
+  Icon,
 } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const fadeInUp = keyframes`
   from {
@@ -34,68 +39,126 @@ const Hero = () => {
   const name = "I'm Osama Alsrraj";
 
   return (
-    <Box
-      id="home"
-      position="relative"
-      color="black"
-      mt={{ base: "80px", sm: "150px" }}
-      px={4}
-      w="100%"
-      animation={`${fadeInUp} 1s ease-in-out`}
-    >
+    <Container maxW="container.xl" id="home">
       <Flex
-        direction={["column", "column", "row"]}
-        justifyContent="center"
-        alignItems="center"
-        wrap="wrap"
-        textAlign={["center", "center", "left"]}
+        minH="90vh"
+        direction={{ base: "column", lg: "row" }}
+        align="center"
+        justify="space-between"
+        py={{ base: "20", lg: "32" }}
+        gap={{ base: 8, lg: 16 }}
       >
-        <Box mb={[4, 4, 0]} textAlign={["center", "center", "left"]}>
+        <VStack
+          align={{ base: "center", lg: "start" }}
+          spacing={6}
+          flex={1}
+          animation={`${fadeInUp} 1s ease-out`}
+        >
           <Text
-            mb={2}
-            fontSize={["34px", "40px", "44px", "55px"]}
-            fontWeight="bold"
-            letterSpacing="wide"
-            animation={`${fadeInUp} 1.5s 0.3s ease-in-out both`}
-          >
-            Hi, {name}
-          </Text>
-          <Text
-            fontSize={["20px", "28px", "36px", "48px"]}
-            fontWeight="bold"
+            fontSize={{ base: "lg", md: "xl" }}
             color="blue.500"
-            lineHeight="1.2"
-            animation={`${textZoomIn} 1.5s 0.5s ease-in-out both`}
+            fontWeight="medium"
           >
-            Web Developer
+            Hello, I'm
           </Text>
-          <Link href="OsamaAlsrrajResume.pdf" download="osamasarrajCV.pdf">
-            <Button
-              mt={4}
-              size="lg"
-              colorScheme="blue"
-              animation={`${fadeInUp} 1.5s 0.7s ease-in-out both`}
-              _hover={{ bg: "blue.600", transform: "scale(1.05)" }}
-              transition="all 0.3s ease"
-            >
-              Download CV
-            </Button>
-          </Link>
-        </Box>
-        <Box mt={[4, 4, 0]} textAlign="center">
+          <Text
+            fontSize={{ base: "4xl", md: "6xl" }}
+            fontWeight="bold"
+            lineHeight="shorter"
+            letterSpacing="tight"
+          >
+            {name}
+          </Text>
+          <Text
+            fontSize={{ base: "xl", md: "2xl" }}
+            color="gray.600"
+            maxW="600px"
+            textAlign={{ base: "center", lg: "left" }}
+          >
+            A passionate Full Stack Developer crafting innovative web solutions
+          </Text>
+
+          <HStack spacing={4}>
+            <Link href="OsamaAlsrrajResume.pdf" download="osamasarrajCV.pdf">
+              <Button
+                size="lg"
+                colorScheme="blue"
+                px={8}
+                _hover={{
+                  transform: "translateY(-2px)",
+                  boxShadow: "lg",
+                }}
+                transition="all 0.2s"
+              >
+                Download CV
+              </Button>
+            </Link>
+            <Link href="#contact">
+              <Button
+                size="lg"
+                variant="outline"
+                colorScheme="blue"
+                px={8}
+                _hover={{
+                  transform: "translateY(-2px)",
+                  boxShadow: "lg",
+                }}
+                transition="all 0.2s"
+              >
+                Contact Me
+              </Button>
+            </Link>
+          </HStack>
+
+          <HStack spacing={4} pt={4}>
+            <Link href="https://github.com/osama2-9" isExternal>
+              <Icon
+                as={FaGithub}
+                w={6}
+                h={6}
+                _hover={{ color: "blue.500", transform: "scale(1.1)" }}
+                transition="all 0.2s"
+              />
+            </Link>
+            <Link href="https://www.linkedin.com/in/osama-alsrraj/" isExternal>
+              <Icon
+                as={FaLinkedin}
+                w={6}
+                h={6}
+                _hover={{ color: "blue.500", transform: "scale(1.1)" }}
+                transition="all 0.2s"
+              />
+            </Link>
+          </HStack>
+        </VStack>
+
+        <Box
+          flex={1}
+          position="relative"
+          animation={`${fadeInUp} 1s ease-out 0.3s backwards`}
+        >
+          <Box
+            position="absolute"
+            inset={0}
+            bgGradient="radial(blue.400, transparent 70%)"
+            opacity={0.15}
+            borderRadius="full"
+            filter="blur(40px)"
+          />
           <Image
             src="me.jpg"
             alt="Osama Alsrraj"
-            boxSize={["200px", "250px", "300px", "350px"]}
             borderRadius="full"
-            ml={{ lg: "70px" }}
-            shadow="lg"
-            animation={`${fadeInUp} 1.5s 0.5s ease-in-out both`}
-            transition="all 0.3s ease"
+            boxSize={{ base: "300px", lg: "400px" }}
+            objectFit="cover"
+            mx="auto"
+            boxShadow="2xl"
+            border="4px solid"
+            borderColor="blue.500"
           />
         </Box>
       </Flex>
-    </Box>
+    </Container>
   );
 };
 
