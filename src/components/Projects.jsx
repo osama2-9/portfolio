@@ -62,7 +62,7 @@ const Projects = () => {
     ecommerce: {
       title: "E-commerce Platform",
       description:
-        "A full-featured e-commerce platform with user authentication, product management, and secure payments",
+        "A full-featured e-commerce platform with user authentication, product management etc..",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       images: imageGroups.ecommerce,
     },
@@ -76,14 +76,14 @@ const Projects = () => {
     onlineCoursesPlatform: {
       title: "Online Courses Platform",
       description:
-        "Interactive learning platform with course management and student progress tracking",
+        "Interactive learning platform with course management and student progress tracking with invoked quiz app",
       tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma"],
       images: imageGroups.onlineCoursesPlatform,
     },
     threadsClone: {
       title: "Threads Clone",
       description:
-        "Social media platform clone with real-time messaging and user interactions",
+        "Social media platform clone ",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       images: imageGroups.threadsClone,
     },
