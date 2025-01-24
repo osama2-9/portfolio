@@ -59,7 +59,7 @@ const Hero = () => {
             color="blue.500"
             fontWeight="medium"
           >
-            Hello, I'm
+            Hello
           </Text>
           <Text
             fontSize={{ base: "4xl", md: "6xl" }}
