@@ -53,7 +53,7 @@ const Projects = () => {
 
     foodApp: Array.from({ length: 43 }, (_, i) => `/food_${i + 1}.png`),
     onlineCoursesPlatform: Array.from(
-      { length: 43 },
+      { length: 46 },
       (_, i) => `/ocp${i + 1}.png`
     ),
   };
