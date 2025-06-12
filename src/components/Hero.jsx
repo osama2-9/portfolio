@@ -79,7 +79,7 @@ const Hero = () => {
           </Text>
 
           <HStack spacing={4}>
-            <Link href="OsamaAlsrrajResume.pdf" download="osamasarrajCV.pdf">
+            <Link href="Osama Alsrraj Cv.pdf" download="Osama Alsrraj Cv.pdf">
               <Button
                 size="lg"
                 colorScheme="blue"

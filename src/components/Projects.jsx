@@ -26,29 +26,6 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   const imageGroups = {
-    ecommerce: [
-      "/e1.png",
-      "/e2.png",
-      "/e3.png",
-      "/e4.png",
-      "/main.png",
-      "/e6.png",
-      "/e7.png",
-      "/e8.png",
-      "/e9.png",
-      "/e10.png",
-      "/e11.png",
-      "/e12.png",
-      "/e13.png",
-      "/e14.png",
-      "/e15.png",
-      "/e16.png",
-      "/e17.png",
-      "/myorder.png",
-      "/e19.png",
-      "/e20.png",
-      "e21.png",
-    ],
     threadsClone: Array.from({ length: 4 }, (_, i) => `/t${i + 1}.png`),
 
     foodApp: Array.from({ length: 43 }, (_, i) => `/food_${i + 1}.png`),
@@ -59,12 +36,12 @@ const Projects = () => {
   };
 
   const projectData = {
-    ecommerce: {
-      title: "E-commerce Platform",
+    onlineCoursesPlatform: {
+      title: "Online Courses Platform",
       description:
-        "A full-featured e-commerce platform with user authentication, product management etc..",
-      tech: ["React", "Node.js", "Express", "MongoDB"],
-      images: imageGroups.ecommerce,
+        "Interactive learning platform with course management and student progress tracking with invoked quiz app",
+      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma"],
+      images: imageGroups.onlineCoursesPlatform,
     },
     foodApp: {
       title: "Food Delivery App",
@@ -73,17 +50,10 @@ const Projects = () => {
       tech: ["React + vite +ts", "Node.js", "Express", "MongoDB"],
       images: imageGroups.foodApp,
     },
-    onlineCoursesPlatform: {
-      title: "Online Courses Platform",
-      description:
-        "Interactive learning platform with course management and student progress tracking with invoked quiz app",
-      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma"],
-      images: imageGroups.onlineCoursesPlatform,
-    },
+
     threadsClone: {
       title: "Threads Clone",
-      description:
-        "Social media platform clone ",
+      description: "Social media platform clone ",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       images: imageGroups.threadsClone,
     },
