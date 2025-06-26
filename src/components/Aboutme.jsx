@@ -54,7 +54,6 @@ const Aboutme = () => {
     <Box id="about" py={20} bg="gray.50" position="relative" overflow="hidden">
       <Container maxW="container.xl">
         <VStack spacing={16}>
-          {/* About Section */}
           <VStack spacing={6} textAlign="center">
             <Text
               fontSize={{ base: "3xl", md: "4xl" }}
@@ -104,11 +103,10 @@ const Aboutme = () => {
             </SkillCategory>
             <SkillCategory icon={FaTools} title="Full Stack Development">
               I have experience working with both frontend and backend
-              technologies. 
+              technologies.
             </SkillCategory>
           </Grid>
 
-          {/* Technologies Grid */}
           <Box w="full">
             <Text
               fontSize={{ base: "2xl", md: "3xl" }}
@@ -157,30 +155,83 @@ const Aboutme = () => {
               ))}
             </Grid>
           </Box>
+
+          <Box w="full">
+            <Text
+              fontSize={{ base: "2xl", md: "3xl" }}
+              fontWeight="bold"
+              textAlign="center"
+              mb={10}
+              color="gray.700"
+            >
+              Achievements
+            </Text>
+
+            <Flex justifyContent="center" alignItems="center">
+              <Box
+                maxW="sm"
+                p={6}
+                bg="white"
+                rounded="xl"
+                shadow="lg"
+                transition="all 0.3s"
+                _hover={{
+                  transform: "translateY(-5px)",
+                  shadow: "xl",
+                }}
+                textAlign="center"
+              >
+                <VStack spacing={4}>
+                  <Image
+                    src="/microsoft_badge.jpeg"
+                    alt="Microsoft TechBridge Hackathon Badge"
+                    w="200px"
+                    h="200px"
+                    objectFit="contain"
+                  />
+                  <Text fontSize="xl" fontWeight="bold" color="gray.700">
+                    Microsoft TechBridge Hackathon
+                  </Text>
+                  <Text color="gray.600">
+                    Awarded for outstanding performance in the TechBridge
+                    Hackathon - Cairo, June 2025
+                  </Text>
+                  <a
+                    href="https://www.credly.com/badges/a7a03620-2adb-4a0c-86c7-db40a1a21f67"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#3182CE", textDecoration: "underline" }}
+                  >
+                    View Badge
+                  </a>
+                </VStack>
+              </Box>
+            </Flex>
+          </Box>
+
+          {/* Background Decorations */}
+          <Box
+            position="absolute"
+            top="0"
+            right="0"
+            w="300px"
+            h="300px"
+            bgGradient="radial(blue.400, transparent 70%)"
+            opacity="0.1"
+            filter="blur(40px)"
+          />
+          <Box
+            position="absolute"
+            bottom="0"
+            left="0"
+            w="300px"
+            h="300px"
+            bgGradient="radial(blue.400, transparent 70%)"
+            opacity="0.1"
+            filter="blur(40px)"
+          />
         </VStack>
       </Container>
-
-      {/* Background Decorations */}
-      <Box
-        position="absolute"
-        top="0"
-        right="0"
-        w="300px"
-        h="300px"
-        bgGradient="radial(blue.400, transparent 70%)"
-        opacity="0.1"
-        filter="blur(40px)"
-      />
-      <Box
-        position="absolute"
-        bottom="0"
-        left="0"
-        w="300px"
-        h="300px"
-        bgGradient="radial(blue.400, transparent 70%)"
-        opacity="0.1"
-        filter="blur(40px)"
-      />
     </Box>
   );
 };
