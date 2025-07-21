@@ -80,10 +80,18 @@ const Aboutme = () => {
               maxW="800px"
               lineHeight="tall"
             >
-              I am a passionate and experienced software developer specializing
-              in full-stack development. With expertise in modern web
-              technologies, I create scalable and efficient solutions that
-              deliver exceptional user experiences.
+              a passionate and experienced software developer with a strong
+              background in both front-end and back-end development. I
+              specialize in building scalable and efficient web applications,
+              ensuring seamless integration across all layers of development.
+              With a focus on delivering high-performance solutions, I am
+              committed to creating user-centric, dynamic experiences and
+              solving complex technical challenges. My expertise spans a variety
+              of technologies, allowing me to work on all aspects of
+              development, from the user interface to the server-side logic. I
+              also handle the deployment and hosting of both front-end and
+              back-end projects, ensuring smooth and reliable performance in
+              production environments.
             </Text>
           </VStack>
 
@@ -209,7 +217,7 @@ const Aboutme = () => {
             </Flex>
           </Box>
 
-          {/* Background Decorations */}
+         
           <Box
             position="absolute"
             top="0"

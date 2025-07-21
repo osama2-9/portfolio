@@ -7,12 +7,14 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import Experince from "./components/Experince";
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
       <Aboutme />
+      <Experince />
       <Services />
       <Projects />
       <Contact />

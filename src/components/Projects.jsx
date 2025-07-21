@@ -30,7 +30,7 @@ const Projects = () => {
 
     foodApp: Array.from({ length: 43 }, (_, i) => `/food_${i + 1}.png`),
     onlineCoursesPlatform: Array.from(
-      { length: 49 },
+      { length: 53 },
       (_, i) => `/ocp${i + 1}.png`
     ),
   };
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Online Courses Platform",
       description:
         "Interactive learning platform with course management and student progress tracking with invoked quiz app",
-      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma"],
+      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma" ,"Google Cloud"],
       images: imageGroups.onlineCoursesPlatform,
     },
     foodApp: {
