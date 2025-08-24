@@ -33,6 +33,9 @@ const Projects = () => {
       { length: 53 },
       (_, i) => `/ocp${i + 1}.png`
     ),
+    carRentalWebsite: Array.from(
+      { length: 26 },
+      (_, i) => `/d-${i + 1}.png`)
   };
 
   const projectData = {
@@ -40,7 +43,14 @@ const Projects = () => {
       title: "Online Courses Platform",
       description:
         "Interactive learning platform with course management and student progress tracking with invoked quiz app",
-      tech: ["React + vite +ts", "Node.js", "Express", "Postgresql", "Prisma" ,"Google Cloud"],
+      tech: [
+        "React + vite +ts",
+        "Node.js",
+        "Express",
+        "Postgresql",
+        "Prisma",
+        "Google Cloud",
+      ],
       images: imageGroups.onlineCoursesPlatform,
     },
     foodApp: {
@@ -56,6 +66,13 @@ const Projects = () => {
       description: "Social media platform clone ",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       images: imageGroups.threadsClone,
+    },
+    carRentalWebsite: {
+      title: "Car Rental Website",
+      description:
+        "A responsive web application that allows users to browse, search, and book cars for rent with ease. The platform supports user authentication, car availability management, secure online payments, and booking history tracking. Admins can manage cars, pricing, and rental records through a dedicated dashboard. Built with a modern front-end and a scalable backend, the system ensures smooth performance, real-time updates, and an intuitive user experience.",
+      tech: ["Next ts", "Node.js", "Express", "Postgresql", "Prisma"],
+      images: imageGroups.carRentalWebsite,
     },
   };
 

@@ -17,15 +17,18 @@ const technologies = [
   { image: "/js.png", name: "JavaScript" },
   { image: "/typescript.png", name: "TypeScript" },
   { image: "/react.png", name: "React.js" },
-  { image: "/express.png", name: "Express.js" },
-  { image: "/node.png", name: "Node.js" },
-  { image: "/mongo.png", name: "MongoDB" },
-  { image: "/mysql.png", name: "MySQL" },
   { image: "/tailwind.svg", name: "Tailwind CSS" },
   { image: "/chakra.png", name: "Chakra UI" },
-  { image: "/git.svg", name: "Git" },
+  { image: "/next-js.png", name: "Next.js" },
+  { image: "/redux.png", name: "Redux" },
+  { image: "/node.png", name: "Node.js" },
+  { image: "/express.png", name: "Express.js" },
   { image: "/postgresql.png", name: "PostgreSQL" },
+  { image: "/mysql.png", name: "MySQL" },
+  { image: "/mongo.png", name: "MongoDB" },
   { image: "/prisma.png", name: "Prisma" },
+  { image: "/redis.png", name: "Redis " },
+  { image: "/git.svg", name: "Git" },
 ];
 
 const SkillCategory = ({ icon, title, children }) => (
@@ -217,7 +220,6 @@ const Aboutme = () => {
             </Flex>
           </Box>
 
-         
           <Box
             position="absolute"
             top="0"
